@@ -7,7 +7,10 @@ module.exports = {
   variants: {
     extend: {
       animation: ['group-hover'],
+      textColor: ['active'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

@@ -27,4 +27,3 @@ function Header(){
 }
 
 export default Header;
-// flex justify-between items-center p-5
