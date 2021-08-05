@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, Switch, useLocation} from 'react-router-dom';
+import { Switch, useLocation} from 'react-router-dom';
 import Header from './components/header/header';
-import { Hellow } from './components/hello';
 import Navbar from './components/navbar/navbar';
+import Results from './components/result/result';
 
 export function RouteApp(props){
   const paramsSearch = new URLSearchParams(useLocation().search);
@@ -13,7 +13,7 @@ export function RouteApp(props){
       <Navbar/>
       
       <Switch>
-        <Route path={`/genre/:genre`} component={Hellow} />
+        <Results genre={paramsSearch.get('genre')} />
       </Switch>
     </>
   )
