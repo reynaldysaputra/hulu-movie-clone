@@ -7,7 +7,10 @@ module.exports = {
   variants: {
     extend: {
       animation: ['group-hover'],
+      opacity: ['group-hover'],
+      fontWeight: ['group-hover'],
       textColor: ['active'],
+      zIndex: ['hover']
     },
   },
   plugins: [

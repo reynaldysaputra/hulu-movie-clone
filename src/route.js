@@ -4,8 +4,8 @@ import Header from './components/header/header';
 import Navbar from './components/navbar/navbar';
 import Results from './components/result/result';
 
-export function RouteApp(props){
-  const paramsSearch = new URLSearchParams(useLocation().search);
+export function RouteApp(){
+  const paramsSearch = new URLSearchParams(useLocation().search).get('genre');
 
   return(
     <>
@@ -13,7 +13,7 @@ export function RouteApp(props){
       <Navbar/>
       
       <Switch>
-        <Results genre={paramsSearch.get('genre')} />
+        <Results genre={paramsSearch} />
       </Switch>
     </>
   )
